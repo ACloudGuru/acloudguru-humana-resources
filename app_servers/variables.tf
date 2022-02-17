@@ -34,7 +34,7 @@ variable "tags" {
 
 locals {
   regions_with_availability_zones = ["<LOCATION>"] #["centralus","eastus2","eastus","westus"]
-  zones = contains(local.regions_with_availability_zones, var.location) ? list("1","2","3") : null
+  zones = contains(local.regions_with_availability_zones, var.location) ? tolist(["1","2","3"]) : null
 }
 
 variable "azurerm_virtual_machine_scale_set" {

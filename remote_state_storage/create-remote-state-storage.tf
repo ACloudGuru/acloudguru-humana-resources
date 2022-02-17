@@ -24,7 +24,7 @@ resource "random_string" "resource_code" {
 resource "azurerm_resource_group" "guru" {
   #name     = "<RESOURCE_GROUP>"
   #location = "<LOCATION>"
-  #tags     = tags     = {
+  #tags     = {
   #  environment = "demo"
   #}
 }
